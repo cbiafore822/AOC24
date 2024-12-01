@@ -90,7 +90,7 @@ pub fn list_distance(input_path: &str) -> Result<u64> {
     Ok(loc1.find_distance(&loc2))
 }
 
-// Elapsed time: 1213 us
+// Elapsed time: 930 us
 // Memory Used: 74.663086 kb
 pub fn get_similarity_score(input_path: &str) -> Result<u64> {
     let input = get_input(input_path)?;
@@ -102,7 +102,7 @@ pub fn get_similarity_score(input_path: &str) -> Result<u64> {
         })
         .collect::<Vec<(i64, i64)>>();
 
-    let locs = LocationList::from(nums.iter().map(|(a, _)| *a).collect::<Vec<i64>>().as_mut());
+    let locs = LocationList::from(nums.iter().map(|(a, _)| *a).collect::<Vec<i64>>());
     let freqs = FrequencyList::from(nums.iter().map(|(_, b)| *b).collect::<Vec<i64>>());
     Ok(locs.find_similarity(&freqs))
 }
