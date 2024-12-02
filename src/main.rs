@@ -8,13 +8,14 @@ use std::{
 };
 
 mod day_1;
+mod day_2;
 
 #[global_allocator]
 static PEAK_ALLOC: PeakAlloc = PeakAlloc;
 
 fn main() {
     let start = Local::now();
-    let res = day_1::get_similarity_score(day_1::INPUT).unwrap();
+    let res = day_2::get_safe_reports_with_dampaner(day_2::INPUT).unwrap();
     let duration = (Local::now() - start).num_microseconds().unwrap();
     println!("Result: {}", res);
     println!("Elapsed time: {} us", duration);
