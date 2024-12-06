@@ -10,13 +10,14 @@ use std::{
 mod day_1;
 mod day_2;
 mod day_3;
+mod day_4;
 
 #[global_allocator]
 static PEAK_ALLOC: PeakAlloc = PeakAlloc;
 
 fn main() {
     let start = Local::now();
-    let res = day_3::calculate_corrupted_mul_do_instructions(day_3::INPUT).unwrap();
+    let res = day_4::find_xmas_cross_wordsearch(day_4::INPUT).unwrap();
     let duration = (Local::now() - start).num_microseconds().unwrap();
     println!("Result: {}", res);
     println!("Elapsed time: {} us", duration);
