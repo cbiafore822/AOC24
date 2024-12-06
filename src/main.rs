@@ -9,13 +9,14 @@ use std::{
 
 mod day_1;
 mod day_2;
+mod day_3;
 
 #[global_allocator]
 static PEAK_ALLOC: PeakAlloc = PeakAlloc;
 
 fn main() {
     let start = Local::now();
-    let res = day_2::get_safe_reports_with_dampaner(day_2::INPUT).unwrap();
+    let res = day_3::calculate_corrupted_mul_do_instructions(day_3::INPUT).unwrap();
     let duration = (Local::now() - start).num_microseconds().unwrap();
     println!("Result: {}", res);
     println!("Elapsed time: {} us", duration);
