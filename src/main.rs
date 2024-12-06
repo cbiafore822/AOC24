@@ -11,13 +11,14 @@ mod day_1;
 mod day_2;
 mod day_3;
 mod day_4;
+mod day_5;
 
 #[global_allocator]
 static PEAK_ALLOC: PeakAlloc = PeakAlloc;
 
 fn main() {
     let start = Local::now();
-    let res = day_4::find_xmas_cross_wordsearch(day_4::INPUT).unwrap();
+    let res = day_5::calculate_incorrectly_ordered_updates(day_5::INPUT).unwrap();
     let duration = (Local::now() - start).num_microseconds().unwrap();
     println!("Result: {}", res);
     println!("Elapsed time: {} us", duration);
