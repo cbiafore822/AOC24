@@ -6,7 +6,7 @@ use anyhow::Result;
 pub const INPUT: &str = "inputs/day_4.txt";
 pub const TEST: &str = "inputs/test.txt";
 
-pub const NEIGHBORS: [(i64, i64); 8] = [
+const NEIGHBORS: [(i64, i64); 8] = [
     (-1, -1),
     (-1, 0),
     (-1, 1),
@@ -16,13 +16,13 @@ pub const NEIGHBORS: [(i64, i64); 8] = [
     (1, 0),
     (1, 1),
 ];
-pub const DIAGNOL_NEIGHBORS: [(i64, i64); 4] = [(-1, -1), (1, 1), (1, -1), (-1, 1)];
+const DIAGNOL_NEIGHBORS: [(i64, i64); 4] = [(-1, -1), (1, 1), (1, -1), (-1, 1)];
 
-pub const XMAS: [char; 4] = ['X', 'M', 'A', 'S'];
-pub const MAS: [char; 2] = ['M', 'S'];
+const XMAS: [char; 4] = ['X', 'M', 'A', 'S'];
+const MAS: [char; 2] = ['M', 'S'];
 
-pub struct WordSearch {
-    pub grid: Vec<Vec<char>>,
+struct WordSearch {
+    grid: Vec<Vec<char>>,
 }
 
 impl WordSearch {
