@@ -19,7 +19,7 @@ static PEAK_ALLOC: PeakAlloc = PeakAlloc;
 
 fn main() {
     let start = Local::now();
-    let res = day_6::find_distinct_guard_positions(day_6::INPUT).unwrap();
+    let res = day_6::find_wall_cycle_locations(day_6::INPUT).unwrap();
     let duration = (Local::now() - start).num_microseconds().unwrap();
     println!("Result: {}", res);
     println!("Elapsed time: {} us", duration);
