@@ -14,13 +14,14 @@ mod day_4;
 mod day_5;
 mod day_6;
 mod day_7;
+mod day_8;
 
 #[global_allocator]
 static PEAK_ALLOC: PeakAlloc = PeakAlloc;
 
 fn main() {
     let start = Local::now();
-    let res = day_7::find_valid_equations_without_concatenation(day_7::INPUT).unwrap();
+    let res = day_8::find_all_extended_antinodes(day_8::INPUT).unwrap();
     let duration = (Local::now() - start).num_microseconds().unwrap();
     println!("Result: {}", res);
     println!("Elapsed time: {} us", duration);
