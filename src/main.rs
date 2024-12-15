@@ -9,6 +9,7 @@ use std::{
 
 mod day_1;
 mod day_10;
+mod day_11;
 mod day_2;
 mod day_3;
 mod day_4;
@@ -23,7 +24,7 @@ static PEAK_ALLOC: PeakAlloc = PeakAlloc;
 
 fn main() {
     let start = Local::now();
-    let res = day_10::find_total_distinct_trailheads(day_10::INPUT).unwrap();
+    let res = day_11::get_total_stones_after_blinks(day_11::INPUT, 75).unwrap();
     let duration = (Local::now() - start).num_microseconds().unwrap();
     println!("Result: {}", res);
     println!("Elapsed time: {} us", duration);
